@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中央氣象署 - 115年2月23日地震預警系統事件說明</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9; 
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+        .tab-btn.active {
+            border-bottom: 2px solid #3b82f6;
+            color: #2563eb;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- 導覽列 -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="activity" class="text-blue-600 h-6 w-6"></i>
+                    <span class="font-bold text-lg text-slate-800">中央氣象署 地震測報中心</span>
+                </div>
+                <div class="text-sm text-slate-500">
+                    發布日期：115年2月23日
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 標題與致歉區 -->
+    <header class="bg-blue-50 py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <div class="inline-flex items-center justify-center p-3 bg-blue-100 rounded-full mb-4">
+                <i data-lucide="info" class="text-blue-600 h-8 w-8"></i>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">關於 2月23日 凌晨地震警報事件說明</h1>
+            <p class="text-lg text-slate-600 leading-relaxed mb-6 text-left md:text-center">
+                本日凌晨 1 時 01 分，系統針對屏東與台東發布了預估規模 4.6、震度 3 級的國家級警報。經查證，台灣周邊並未發生此地震。對於深夜警報聲響造成的驚擾，中央氣象署在此向全國民眾表達最誠摯的歉意，並於此透明公開事件原委與後續改善措施。
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-12 space-y-16">
+
+        <!-- 圖解發生原因 -->
+        <section class="fade-in">
+            <h2 class="text-2xl font-bold text-center mb-8 flex items-center justify-center gap-2">
+                <i data-lucide="map" class="text-slate-600"></i>
+                為什麼會發生誤報？圖解事件經過
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-start relative">
+                <!-- 裝飾用連接線 (僅在大螢幕顯示) -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-blue-100 -z-10 transform -translate-y-1/2 rounded"></div>
+
+                <!-- Step 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 relative z-10 flex flex-col items-center text-center h-full">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4 text-red-600 shadow-sm">
+                        <i data-lucide="globe-2" class="w-8 h-8"></i>
+                    </div>
+                    <span class="text-xs font-bold text-red-500 mb-2 border border-red-200 bg-red-50 px-2 py-1 rounded-full">1. 遠洋強震發生</span>
+                    <h3 class="font-bold mb-2">馬來西亞 M7.1 地震</h3>
+                    <p class="text-sm text-slate-500">凌晨時分，距離台灣約 1,800 公里的馬來西亞外海，發生了芮氏規模 7.1、深度 619 公里的深層強震。</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 relative z-10 flex flex-col items-center text-center h-full">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4 text-blue-600 shadow-sm">
+                        <i data-lucide="waves" class="w-8 h-8"></i>
+                    </div>
+                    <span class="text-xs font-bold text-blue-500 mb-2 border border-blue-200 bg-blue-50 px-2 py-1 rounded-full">2. 震波長途傳遞</span>
+                    <h3 class="font-bold mb-2">震波抵達台灣</h3>
+                    <p class="text-sm text-slate-500">由於地震規模極大，其產生的低頻震波在傳遞了近兩千公里後，仍具有一定能量，並被台灣的地震觀測網接收。</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 relative z-10 flex flex-col items-center text-center h-full">
+                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-4 text-amber-600 shadow-sm">
+                        <i data-lucide="cpu" class="w-8 h-8"></i>
+                    </div>
+                    <span class="text-xs font-bold text-amber-600 mb-2 border border-amber-200 bg-amber-50 px-2 py-1 rounded-full">3. 系統運算觸發</span>
+                    <h3 class="font-bold mb-2">幾何中心法誤判</h3>
+                    <p class="text-sm text-slate-500">系統自動啟動「幾何中心法」進行快速定位，將這股同時抵達各測站的遠震波，誤判為發生在台灣近海的 M4.6 淺層地震。</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100 relative z-10 flex flex-col items-center text-center h-full">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4 text-orange-600 shadow-sm">
+                        <i data-lucide="bell-ring" class="w-8 h-8"></i>
+                    </div>
+                    <span class="text-xs font-bold text-orange-600 mb-2 border border-orange-200 bg-orange-50 px-2 py-1 rounded-full">4. 警報發送</span>
+                    <h3 class="font-bold mb-2">觸發國家級警報</h3>
+                    <p class="text-sm text-slate-500">因計算出的預估震度達 3 級，達到了警報發布門檻，系統遂自動向屏東與台東地區發送了災防告警訊息 (PWS)。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 改善措施與科普 -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 fade-in">
+            <div class="bg-slate-800 text-white p-8 rounded-2xl shadow-lg relative overflow-hidden">
+                <i data-lucide="shield-check" class="absolute -bottom-4 -right-4 w-32 h-32 text-slate-700 opacity-50"></i>
+                <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                    <i data-lucide="wrench" class="text-blue-400"></i>
+                    氣象署的修正與承諾
+                </h3>
+                <p class="mb-4 text-slate-300 leading-relaxed">
+                    為了避免「遠洋強震」的訊號再次欺騙預警系統，我們已經規劃並即將部署全新的系統雙重確認機制：
+                </p>
+                <div class="bg-slate-700 p-4 rounded-lg border border-slate-600">
+                    <h4 class="font-bold text-blue-300 mb-2">導入「P波振幅閾值」機制</h4>
+                    <p class="text-sm text-slate-300">
+                        未來的預警系統在發布警報前，除了計算幾何中心外，**必須先確認觀測到的初達 P 波（縱波）振幅達到一定的大小**。遠震傳到台灣時 P波通常已大幅衰減，透過此機制能有效過濾掉不合理的遠距干擾，大幅提升系統的強健度。
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 p-8 rounded-2xl shadow-md border border-blue-100">
+                <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-blue-900">
+                    <i data-lucide="lightbulb" class="text-yellow-500"></i>
+                    地震科普：什麼是幾何中心法？
+                </h3>
+                <p class="mb-4 text-slate-700 leading-relaxed">
+                    地震預警必須在「幾秒鐘」內完成計算，因此系統在初期會使用**「幾何中心法」**。
+                </p>
+                <ul class="space-y-3 text-slate-600 text-sm list-disc pl-5 marker:text-blue-400">
+                    <li>當多個測站幾乎「同時」接收到震波時，系統為了搶時間，會假設地震發生在這些測站的「幾何中心點」。</li>
+                    <li>如果是台灣本地地震，震波會由近而遠擴散，這套演算法非常快速有效。</li>
+                    <li>但本次馬來西亞的遠震，震波面極大，抵達台灣時幾乎同時掃過整個觀測網，導致系統誤以為震源就在測站陣列的中間（即台灣西南部近海），加上低頻訊號強，進而錯估了規模。</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 原始技術資料 (Tab 介面) -->
+        <section class="fade-in bg-white rounded-2xl shadow-md border border-slate-200 overflow-hidden">
+            <div class="px-6 py-4 border-b border-slate-100 bg-slate-50 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <h3 class="font-bold text-slate-800 flex items-center gap-2">
+                    <i data-lucide="database" class="w-5 h-5"></i>
+                    透明公開：事件原始觀測資料
+                </h3>
+                <!-- Tabs -->
+                <div class="flex gap-4 text-sm font-medium">
+                    <button class="tab-btn active pb-1 transition-colors" onclick="switchTab('tab-eew')">警報 XML 內容</button>
+                    <button class="tab-btn pb-1 text-slate-500 hover:text-slate-800 transition-colors" onclick="switchTab('tab-log')">系統觸發 Log</button>
+                    <button class="tab-btn pb-1 text-slate-500 hover:text-slate-800 transition-colors" onclick="switchTab('tab-usgs')">真實地震 (USGS)</button>
+                </div>
+            </div>
+
+            <div class="p-0 bg-slate-900 text-green-400 font-mono text-xs sm:text-sm custom-scrollbar" style="max-height: 400px; overflow-y: auto;">
+                
+                <!-- Tab: EEW XML -->
+                <div id="tab-eew" class="p-6 block">
+<pre><code>&lt;!-- 此為中央氣象署系統誤發的地震警報資訊 --&gt;
+&lt;earthquake&gt;
+  &lt;identifier&gt;CWA-EEW115001301&lt;/identifier&gt;
+  &lt;schemaVer&gt;TW-CWA-XML-EEW:1.0&lt;/schemaVer&gt;
+  &lt;event&gt;地震警報&lt;/event&gt;
+  &lt;senderName&gt;中華民國交通部中央氣象署&lt;/senderName&gt;
+  &lt;sent&gt;2026-02-23T01:01:14+08:00&lt;/sent&gt;
+  &lt;status&gt;Actual&lt;/status&gt;
+  &lt;language&gt;zh-TW&lt;/language&gt;
+  &lt;msgType&gt;Alert&lt;/msgType&gt;
+  &lt;msgNo&gt;1&lt;/msgNo&gt;
+  &lt;description&gt;WAN&lt;/description&gt;
+  &lt;originTime&gt;2026-02-23T01:01:04+08:00&lt;/originTime&gt;
+  &lt;epicenter&gt;
+    &lt;epicenterLon unit="deg"&gt;120.8&lt;/epicenterLon&gt;
+    &lt;epicenterLat unit="deg"&gt;22.66&lt;/epicenterLat&gt;
+  &lt;/epicenter&gt;
+  &lt;depth unit="km"&gt;10.0&lt;/depth&gt;
+  &lt;magnitude&gt;
+    &lt;magnitudeType&gt;f42_3800_3&lt;/magnitudeType&gt;
+    &lt;magnitudeValue&gt;4.6&lt;/magnitudeValue&gt;
+  &lt;/magnitude&gt;
+  &lt;pgaAdj&gt;1.0&lt;/pgaAdj&gt;
+&lt;/earthquake&gt;</code></pre>
+                </div>
+
+                <!-- Tab: Log -->
+                <div id="tab-log" class="p-6 hidden">
+<pre><code>// 此為預警系統當下之測站觸發日誌
+--EQ-- OT: 2026/02/23 01:01:04.38, ST: 2026/02/23 01:01:14.16, lon: 120.800, lat: 22.660, dep: 10.000000, mag: 4.600000, mark: f42, nth: 3, FIRST 
+Site:  TAP, lon: 121.514, lat: 25.038, Si: 1.948000, dist: 273.363861, pga: 0.335100 ---- s_index[0]= 0 
+Site:  KLU, lon: 121.773, lat: 25.149, Si: 1.347000, dist: 293.147698, pga: 0.203802 ---- s_index[1]= 0 
+Site:  BAC, lon: 121.475, lat: 25.019, Si: 1.795000, dist: 270.359911, pga: 0.315112 ---- s_index[2]= 0 
+Site:  BAC, lon: 121.449, lat: 25.164, Si: 1.520000, dist: 285.312191, pga: 0.241712 ---- s_index[2]= 0 
+Site:  BAC, lon: 121.826, lat: 24.972, Si: 1.112000, dist: 276.724903, pga: 0.187043 ---- s_index[2]= 0 
+Site:  NTY, lon: 121.298, lat: 25.000, Si: 1.428000, dist: 264.228105, pga: 0.261476 ---- s_index[3]= 0 
+Site:  NTY, lon: 121.187, lat: 24.967, Si: 1.260000, dist: 258.732153, pga: 0.239797 ---- s_index[3]= 0 
+Site:  NTY, lon: 121.286, lat: 24.884, Si: 1.158000, dist: 251.470769, pga: 0.232216 ---- s_index[3]= 0 
+Site: HSN1, lon: 121.018, lat: 24.779, Si: 1.623000, dist: 235.900817, pga: 0.366010 ---- s_index[4]= 0 
+Site:  HSN, lon: 121.014, lat: 24.828, Si: 1.402000, dist: 241.339446, pga: 0.303207 ---- s_index[5]= 0 
+Site:  HSN, lon: 121.088, lat: 24.736, Si: 1.700000, dist: 231.969904, pga: 0.395394 ---- s_index[5]= 0 
+Site:  NML, lon: 120.826, lat: 24.565, Si: 1.663000, dist: 211.219406, pga: 0.459447 ---- s_index[6]= 0 
+Site:  NML, lon: 120.781, lat: 24.346, Si: 1.434000, dist: 187.053569, pga: 0.495252 ---- s_index[6]= 0 
+Site:  NML, lon: 120.941, lat: 24.465, Si: 0.912000, dist: 200.697967, pga: 0.276759 ---- s_index[6]= 0 
+Site:  TCU, lon: 120.684, lat: 24.146, Si: 1.717000, dist: 165.253282, pga: 0.744573 ---- s_index[7]= 0 
+Site:  TCU, lon: 120.640, lat: 24.348, Si: 1.099000, dist: 187.896345, pga: 0.376434 ---- s_index[7]= 0 
+Site:  TCU, lon: 120.946, lat: 24.278, Si: 1.264000, dist: 180.051541, pga: 0.468233 ---- s_index[7]= 0 
+Site:  WNT, lon: 120.680, lat: 23.907, Si: 1.605000, dist: 139.011380, pga: 0.956248 ---- s_index[8]= 0 
+Site:  WNT, lon: 120.957, lat: 24.012, Si: 1.145000, dist: 150.964606, pga: 0.586261 ---- s_index[8]= 0 
+Site:  WNT, lon: 120.853, lat: 23.696, Si: 1.359000, dist: 115.304484, pga: 1.141529 ---- s_index[8]= 0 
+Site:  WCH, lon: 120.558, lat: 24.079, Si: 2.770000, dist: 159.448961, pga: 1.282752 ---- s_index[9]= 0 
+Site:  WCH, lon: 120.580, lat: 23.960, Si: 2.955000, dist: 146.114843, pga: 1.606545 ---- s_index[9]= 0 
+Site:  WDL, lon: 120.538, lat: 23.715, Si: 2.398000, dist: 120.267041, pga: 1.864227 ---- s_index[10]= 0 
+Site:  WDL, lon: 120.228, lat: 23.523, Si: 2.493000, dist: 112.520476, pga: 2.190225 ---- s_index[10]= 0 
+Site:  CHY, lon: 120.433, lat: 23.496, Si: 2.387000, dist: 100.472322, pga: 2.582094 ---- s_index[11]= 0 
+Site: CHY1, lon: 120.294, lat: 23.457, Si: 2.590000, dist: 102.854356, pga: 2.683648 ---- s_index[12]= 0 
+Site: CHY1, lon: 120.605, lat: 23.439, Si: 2.220000, dist: 89.078180, pga: 2.995725 ---- s_index[12]= 0 
+Site:  TAI, lon: 120.205, lat: 22.993, Si: 1.887000, dist: 72.072911, pga: 3.757712 ---- s_index[13]= 0 
+Site:  TAI, lon: 120.414, lat: 23.353, Si: 2.519000, dist: 86.861468, pga: 3.560259 ---- s_index[13]= 0 
+Site:  TAI, lon: 120.529, lat: 23.185, Si: 1.146000, dist: 65.219673, pga: 2.741890 ---- s_index[13]= 0 
+Site:  KAU, lon: 120.307, lat: 22.594, Si: 1.535000, dist: 52.160155, pga: 5.536506 ---- s_index[14]= 0 
+Site:  KAU, lon: 120.494, lat: 22.886, Si: 1.021000, dist: 41.376230, pga: 5.635509 ---- s_index[14]= 0 
+Site:  SPT, lon: 120.496, lat: 22.677, Si: 1.090000, dist: 32.840828, pga: 9.197137 ---- s_index[15]= 1 
+Site:  SPT, lon: 120.746, lat: 22.004, Si: 1.657000, dist: 73.557373, pga: 3.178404 ---- s_index[15]= 0 
+Site:  SPT, lon: 120.640, lat: 22.744, Si: 1.000000, dist: 21.376821, pga: 18.568352 ---- s_index[15]= 1 
+Site:  ILA, lon: 121.756, lat: 24.764, Si: 1.850000, dist: 252.775289, pga: 0.367474 ---- s_index[16]= 0 
+Site:  ILA, lon: 121.860, lat: 24.608, Si: 2.421000, dist: 241.554458, pga: 0.522727 ---- s_index[16]= 0 
+Site:  ILA, lon: 121.574, lat: 24.638, Si: 1.331000, dist: 233.041283, pga: 0.306961 ---- s_index[16]= 0 
+Site:  HWA, lon: 121.614, lat: 23.975, Si: 1.520000, dist: 168.014971, pga: 0.639379 ---- s_index[17]= 0 
+Site:  HWA, lon: 121.427, lat: 23.669, Si: 1.918000, dist: 129.269273, pga: 1.305902 ---- s_index[17]= 0 
+Site:  HWA, lon: 121.319, lat: 23.347, Si: 1.254000, dist: 93.394418, pga: 1.551304 ---- s_index[17]= 0 
+Site:  TTN, lon: 121.155, lat: 22.752, Si: 1.148000, dist: 39.157526, pga: 7.011633 ---- s_index[18]= 0 
+Site:  TTN, lon: 121.219, lat: 23.095, Si: 1.669000, dist: 65.362994, pga: 3.977136 ---- s_index[18]= 0 
+Site:  TTN, lon: 120.888, lat: 22.340, Si: 1.266000, dist: 37.936042, pga: 8.195850 ---- s_index[18]= 1 
+Site:  PNG, lon: 119.564, lat: 23.565, Si: 1.000000, dist: 161.823809, pga: 0.450680 ---- s_index[19]= 0 
+Site:  KNM, lon: 118.289, lat: 24.407, Si: 1.000000, dist: 321.400751, pga: 0.127771 ---- s_index[20]= 0 
+Site:  MSU, lon: 119.923, lat: 26.169, Si: 1.000000, dist: 398.853042, pga: 0.085938 ---- s_index[21]= 0 
+</code></pre>
+                </div>
+
+                <!-- Tab: USGS -->
+                <div id="tab-usgs" class="p-6 hidden">
+<pre><code>// 此為美國地質調查所 (USGS) 公布之真實地震資訊
+Event: M 7.1 - 55 km NNW of Kota Belud, Malaysia
+Time: 2026-02-22 16:57:46 (UTC) 
+      (對應台灣時間 2026-02-23 00:57:46)
+Location: 6.829°N 116.264°E
+Depth: 619.8 km
+Distance to Taiwan: ~1,800 km
+</code></pre>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="bg-slate-800 text-slate-400 py-8 text-center text-sm">
+        <p>中華民國交通部 中央氣象署 敬上</p>
+        <p class="mt-2">我們將持續精進技術，守護台灣的安全。</p>
+    </footer>
+
+    <script>
+        // 初始化 Icons
+        lucide.createIcons();
+
+        // 滾動動畫觀察器 (Intersection Observer)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach((element) => {
+            observer.observe(element);
+        });
+
+        // Tab 切換功能
+        function switchTab(tabId) {
+            // 隱藏所有內容
+            document.getElementById('tab-eew').classList.add('hidden');
+            document.getElementById('tab-log').classList.add('hidden');
+            document.getElementById('tab-usgs').classList.add('hidden');
+            
+            // 移除所有按鈕 active 狀態
+            const btns = document.querySelectorAll('.tab-btn');
+            btns.forEach(btn => {
+                btn.classList.remove('active', 'text-slate-800');
+                btn.classList.add('text-slate-500');
+            });
+
+            // 顯示目標內容與按鈕狀態
+            document.getElementById(tabId).classList.remove('hidden');
+            event.currentTarget.classList.remove('text-slate-500');
+            event.currentTarget.classList.add('active', 'text-slate-800');
+        }
+    </script>
+</body>
+</html>
